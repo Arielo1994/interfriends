@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registro</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<h1>Registro</h1>
+<form action="registrar.php" method="POST">
+	Nombre de Usuario:
+	<br>
+	<input id="nombreUsuario" name="nombreUsuario" type="text" placeholder="Sirve para identificarse" onchange="validarNombreUsuario()" required></input><br>
+	Contraseña:
+	<br>
+	<input id="clave"name="contrasena" type="password" placeholder="Introduzca su clave" onchange="validarClave()" required></input><br>
+	Ingrese denuevo:
+	<br>
+	<input id="clave2" name="contrasena" type="password" placeholder="Introduzcala otra vez" onchange="validarClave()"></input>
+	<div id="validadorClave"></div>
+	<br>
+	Nombre:
+	<br>
+	<input name="nombre" placeholder="Ejemplo: John"></input><br>
+	Apellidos:
+	<br>
+	<input name="apellidos" type="text"  placeholder="Ejemplo: González o Maier"></input><br>
+	Email:
+	<br>
+	<input name="email"type="email" placeholder="Ejemplo: email@mail.pucv.cl"></input><br>
+	Pais:
+	<br>
+	<input name="pais" type="text" placeholder="Ejemplo: Alemania"></input><br>
+	Género:
+	<br>
+	<input type="radio" name="sexo" value="male" checked>Hombre</input><br>
+    <input type="radio" name="sexo" value="female">Mujer</input><br>
+	Fecha de Nacimiento:
+	<br>
+    <input name="fecha" type="date"></input><br>
+	Teléfono de contacto:
+	<br>
+ 	<input name="telefono" type="text" placeholder="Ejemplo +569 84133836"></input><br>
+	Acerca de mi:
+	<br>
+ 	<textarea placeholder="Descripción sobre mi"rows="6" cols="35" ></textarea><br>
+	<button type="submit"  >Registrarse</button> 
+</form>
+<script type="text/javascript">
+	function validarClave(){
+		
+		var clave=document.getElementById("clave").value;
+		var clave2=document.getElementById("clave2").value;
+			if(clave!=clave2){
+				document.getElementById("validadorClave").innerHTML="Las claves deben coincidir";
+			
+			}else{
+				document.getElementById("validadorClave").innerHTML="Bien hecho!";
+			}
+	}
+	
+	function validarMail(){
+			
+		mail=document.getElementById("mail").value;
+			if(!(mail).endsWith("mail.pucv.cl")){
+				
+				document.getElementById("validadorMail").innerHTML="mail invalido";
+			}else{
+				
+				document.getElementById("validadorMail").innerHTML="Bien hecho";
+			}
+	}
+
+	function validarNombreUsuario(){
+
+		var NombreUsuario=document.getElementById("nombreUsuario").value;
+
+
+		$.ajax({
+                data:  NombreUsuario,
+                url:   'validarNombre.php',
+                type:  'post',
+                success:  function (data) {
+                		//alert(existe.boolean);
+                		//var	existeNombre=existe.boolean;
+                		alert(JSON.parse(data));
+                }
+            });
+
+	}
+</script>
+</body>
+</html>

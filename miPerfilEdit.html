@@ -1,0 +1,106 @@
+<HTML>
+   <HEAD>
+   <meta charset="UTF-8">
+      <TITLE>
+         Interfriends - Mi página
+      </TITLE>
+	  <style>
+		.navegador {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		
+		.liNavegador {
+			float: left;
+		}
+		
+		.aNavegador {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		.liNavegador a:hover {
+			background-color: #111;
+		}
+
+		.active {
+			background-color: blue;
+		}
+		
+		
+		.atributos{
+			list-style-type: none;
+		}
+		
+		p {
+			display: inline-block;  
+		}
+		
+	  </style>
+   </HEAD>
+<BODY>
+	<ul class="navegador">
+		<li class="liNavegador"><a class="aNavegador" href="miPagina.html">Mi página</a></li>
+		<li class="liNavegador"><a class="aNavegador active" href="miPerfil.html">Mi perfil</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="misContactos.html"> Mis contactos</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="salas.html">Salas</a></li>
+		<li></li>
+		
+		<li>	
+			<form action="buscaMisContactos.html">
+				<input placeholder="Buscar persona"></input>
+				<button type="submit">Buscar</button>
+			</form>	
+		</li>
+	</ul><br>
+	
+	<a href="miPerfil.html">Back</a>
+	
+	<div style="display: block;">
+		<h1 style="display: inline-block;">Mi perfil</h1>
+		<select style="display: inline-block;" name="colegiosTableMenu1">
+			<option value="1">Español</option> 
+			<option value="2">Ingles</option>
+		</select>
+	</div>
+	<div style="display: inline-block;">
+		<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			<input name="Datei" type="file" size="50" accept="text/*">
+			<button type="submit">Guardar foto</button>
+		</form>
+	</div>
+	<div style="display: inline-block;">
+	<ul class="atributos">
+	<form>
+		<li><p>Mi nombre:&nbsp </p><input id="nombre" value="Ariel"></input></li>
+		<li><p>Edad:&nbsp </p><input id="nombre" value="100"></input></li>
+		<li><p>Sexo:&nbsp </p><input id="sexo" value="Feminino"></input></li>
+		<li><p>Pais:&nbsp </p><input id="pais" value="Chile"></input></li>
+			<li><p>Ciudad:&nbsp </p><input id="ciudad" value="No se"></input></li>
+		<li><p>Idioma:&nbsp </p> <input id="idioma" value="Chileno"></input></li>
+		<li><p>Intereses:&nbsp </p> <input id="intereses" value="Tinder"></input></li>
+		<li><p>Acerca de mi:&nbsp </p> <input id="acercaDeMi" value="Nada"></input></li>
+		<li><button type="submit">Guardar</button>
+	</form>
+	</ul>
+	</div>
+	
+	<script type="text/javascript">
+	
+		function cambiarFoto()
+		{
+			
+		
+		}
+	
+	</script>
+	
+</BODY>
+</HTML>

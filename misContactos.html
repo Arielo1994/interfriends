@@ -1,0 +1,138 @@
+<HTML>
+   <HEAD>
+   <meta charset="UTF-8">
+      <TITLE>
+         Interfriends - Mis contactos
+      </TITLE>
+	  <style>
+		
+		.navegador {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		
+		.liNavegador {
+			float: left;
+		}
+		
+		.aNavegador {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		.liNavegador a:hover {
+			background-color: #111;
+		}
+
+		.active {
+			background-color: blue;
+		}
+		
+		.amigos{
+			list-style-type: none;
+		}
+		
+		.amigos li a {
+			color: black;
+			text-decoration: none;
+		}
+
+		.amigos li a:hover { 
+			background: white;
+			color: grey;
+		}		
+		
+		img {
+			width: 5em;
+			height: 5em;
+			display: inline-block;
+		}
+
+		p {	
+			display: inline-block;
+		}
+		
+		h1{
+			font-size: 1em;
+		}		
+	  </style>
+   </HEAD>
+<BODY>
+	<ul class="navegador">
+		<li class="liNavegador"><a class="aNavegador" href="miPagina.html">Mi página</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="miPerfil.html">Mi perfil</a></li>
+		<li class="liNavegador"><a class="aNavegador active" href="misContactos.html">Mis contactos</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="salas.html">Salas</a></li>
+		<li></li>
+		
+		<li>	
+			<form action="buscaMisContactos.html">
+				<input placeholder="Buscar persona"></input>
+				<button type="submit">Buscar</button>
+			</form>	
+		</li>
+	</ul> 
+	
+	<div style="display: inline-block;">
+	<h1>Amigos</h1>
+	<ul class="amigos">
+		<li>
+			<a href="contactosPerfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+				<p>Pancho</p>
+			</a>		
+		</li>
+		<li>
+			<a href="contactosPerfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+				<p>Ariel</p>
+			</a>
+		</li>
+		<li>
+			<a href="contactosPerfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+				<p>Pancho</p>
+			</a>
+		</li>
+	</ul>
+	</div>
+	
+	<div style="display: inline-block;">
+	<h1>Friends Requests</h1>
+	<ul class="amigos">
+		<li>
+			<a href="perfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">	
+				<p>Pancho</p>
+			</a>		
+		</li>
+		<li>
+			<a href="perfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+				<p>Ariel</p>
+			</a>
+		</li>
+		<li>
+			<a href="perfil.html">
+				<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+				<p>Pancho</p>
+			</a>
+		</li>
+	</ul>
+	</div>
+	
+	
+	
+	<!-- <form>
+				<input placeholder="Buscar persona"></input>
+				<button type="submit">Buscar</button>
+	</form> -->
+	
+</BODY>
+</HTML>

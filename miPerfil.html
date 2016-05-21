@@ -1,0 +1,82 @@
+<HTML>
+   <HEAD>
+   <meta charset="UTF-8">
+      <TITLE>
+         Interfriends - Mi perfil
+      </TITLE>
+	  <style>
+	  
+		.navegador {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		
+		.liNavegador {
+			float: left;
+		}
+		
+		.aNavegador {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		.liNavegador a:hover {
+			background-color: #111;
+		}
+
+		.active {
+			background-color: blue;
+		}
+		
+		p {
+			display: inline-block;  
+		}
+		
+	  </style>
+   </HEAD>
+<BODY>
+	<ul class="navegador">
+		<li class="liNavegador"><a class="aNavegador" href="miPagina.html">Mi página</a></li>
+		<li class="liNavegador"><a class="aNavegador active" href="miPerfil.html">Mi perfil</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="misContactos.html">Mis contactos</a></li>
+		<li class="liNavegador"><a class="aNavegador" href="salas.html">Salas</a></li>
+		<li></li>
+		
+		<li>	
+			<form action="buscaMisContactos.html">
+				<input placeholder="Buscar persona"></input>
+				<button type="submit">Buscar</button>
+			</form>	
+		</li>
+	</ul> 
+	
+	<div style="display: block;">
+		<h1 style="display: inline-block;">Mi perfil</h1>
+		<form  style="display: inline-block;" action="miPerfilEdit.html" method="post">
+				<li><button type="submit">Editar</button></li>
+		</form>
+	</div>
+	<div style="display: inline-block;">
+		<img src="exemplo_Interfriends_icono.png" alt="Interfriends icon">
+	</div>
+	<div style="display: inline-block;">
+		<p>Mi nombre:&nbsp</p><p id="nombre">Ariel</p><br>
+		<p>Edad:&nbsp</p><p id="nombre" >100</p><br>
+		<p>Sexo:&nbsp</p><p id="sexo">Feminino</p><br>
+		<p>Pais:&nbsp</p><p id="pais">Chile</p><br>
+			<p>Ciudad:&nbsp</p><p id="ciudad">No se</p><br>
+		<p>Idioma:&nbsp</p> <p id="idioma">Chileno</p>
+	</div>
+	<div style="display: block;">
+		<p>Intereses:&nbsp</p> <p id="intereses">Tinder</p><br>
+		<p>Acerca de mi:&nbsp</p> <p id="acercaDeMi">Nada</p>
+	</div>
+	
+</BODY>
+</HTML>
